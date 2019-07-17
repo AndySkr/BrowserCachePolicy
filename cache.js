@@ -6,9 +6,7 @@ const crypto = require("crypto");
 
 module.exports = function (request, response, next) {
   var pathname = url.parse(request.url).pathname;
-  console.log(pathname, "pathname");
   var ext = path.extname(pathname);
-  console.log(ext, "ext");
   ext = ext ? ext.slice(1) : "unknown";
   var realPath = path.join("assets", pathname);
 
